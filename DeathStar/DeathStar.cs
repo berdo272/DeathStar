@@ -9,8 +9,7 @@ namespace DeathStar
 {
     public class DeathStar
     {
-        Mainexhaustport mainExhaustPort;
-        Thermalexhaustport ThermalExhaustPort;
+        Exhaust exhaust;
         TractorBeam tractorBeam;
         MainPowerGenerator mainPowerGenerator;
         HyperMatterReactor hyperMatterReactor;
@@ -26,11 +25,23 @@ namespace DeathStar
         Refinery refinery;
         FuelCollector fuelCollector;
         ExteriorQuadaniumsteelouterhull exteriorQuadaniumSteelOuterHull;
+        Barracks barracks;
+        Armory armory;
         
         public void emergencyHullRepair()
         {
             exteriorQuadaniumSteelOuterHull.NaniteRepair();
         }
-       
+        public void calltoArms()
+        {
+            barracks.activateStormtrooper();
+            barracks.deployToArmory();
+            armory.TakeWeapon();
+        }
+        public void disarmForce()
+        {
+            armory.resturnWeapon();
+            barracks.recallToBarracks();
+        }
     }
 }

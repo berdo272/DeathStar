@@ -8,9 +8,9 @@ namespace TopSecretPlans
 {
     public class Exhaust
     {
-        private readonly int Diameter;
-        private readonly int Length;
-        private readonly int numberOfFans;
+        public int Diameter;
+        public int Length;
+        public int numberOfFans;
         
         public Exhaust(int diameter, int length, int numberOfFans)
         {

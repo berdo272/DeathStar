@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Armory.cs" />
+    <Compile Include="Barracks.cs" />
     <Compile Include="CentralComputerCore.cs" />
     <Compile Include="CoolingSystem.cs" />
     <Compile Include="DeathStar.cs" />
@@ -51,7 +52,6 @@
     <Compile Include="Exhaust.cs" />
     <Compile Include="ExteriorQuadaniumsteelouterhull.cs" />
     <Compile Include="FuelCollector.cs" />
-    <Compile Include="FuelRod.cs" />
     <Compile Include="FuelRodLevel.cs" />
     <Compile Include="HangarBay.cs" />
     <Compile Include="HeatExchanger.cs" />
@@ -61,7 +61,6 @@
     <Compile Include="IChangeTemperature.cs" />
     <Compile Include="IonDriveReactor.cs" />
     <Compile Include="MagneticShielding.cs" />
-    <Compile Include="Mainexhaustport.cs" />
     <Compile Include="MainPowerGenerator.cs" />
     <Compile Include="OffenseMode.cs" />
     <Compile Include="OverBridge.cs" />
@@ -73,7 +72,6 @@
     <Compile Include="ReactorCore.cs" />
     <Compile Include="Refinery.cs" />
     <Compile Include="SuperLaser.cs" />
-    <Compile Include="Thermalexhaustport.cs" />
     <Compile Include="TractorBeam.cs" />
   </ItemGroup>
   <ItemGroup>
