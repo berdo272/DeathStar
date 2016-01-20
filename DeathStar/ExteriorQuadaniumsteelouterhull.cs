@@ -3,22 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DeathStar;
 
 namespace TopSecretPlans
 {
-    public class ExteriorQuadaniumsteelouterhull
+    public class ExteriorQuadaniumsteelouterhull : Iactivate
     {
-        int Hardness;
-        int Health = 100;
-        int Nanites;
+        private int Hardness;
+        private int Health = 100;
+        private int repairDroids;
 
-        public ExteriorQuadaniumsteelouterhull(int Hardness,int Health,int Nanites)
+        public ExteriorQuadaniumsteelouterhull(int Hardness,int Health,int repairDroids)
         {
             this.Hardness = Hardness;
             this.Health = Health;
-            this.Nanites = Nanites;
+            this.repairDroids = repairDroids;
         }
-        public void TakeDamage()
+        private void TakeDamage()
         {
             switch (Hardness)
             {
@@ -39,26 +40,44 @@ namespace TopSecretPlans
                     break;
             }     
         }
-        public void NaniteRepair()
+        private void droidRepairCrew()
         {
             if (Health == 100)
             {
-                Console.WriteLine("You are at maximum health and do not need to repair.");
+                Console.WriteLine("Hull is at maximum health and does not need repairs.");
             }
             else if (Health >= 95)
             {
-                Nanites--;
+                repairDroids--;
                 Health = 100;
             }
             else if (Health > 0)
             {
-                Nanites--;
+                repairDroids--;
                 Health += 5;
             }
             else
             {
-                Console.WriteLine("Your Robot is probably dead.");
+                Console.WriteLine("Hull breach is too critical. Droid repair is no longer possible");
             }
+        }
+        private void replenishDroids()
+        {
+            repairDroids = 20;
+        }
+
+        public void activate()
+        {
+            Console.WriteLine("Hull integrity is at " + Health + "Percent");
+            Console.WriteLine("There are currently " + repairDroids + " repair droids available for emergency repairs.");
+            Console.WriteLine("Attemping to repair hull");
+            droidRepairCrew();
+        }
+
+        public void refresh()
+        {
+            Console.WriteLine("Replenishing supply of repair droids");
+            replenishDroids();
         }
     }
 }

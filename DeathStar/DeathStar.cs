@@ -28,10 +28,7 @@ namespace DeathStar
         Barracks barracks;
         Armory armory;
         
-        public void emergencyHullRepair()
-        {
-            exteriorQuadaniumSteelOuterHull.NaniteRepair();
-        }
+
         public void calltoArms()
         {
             barracks.activateStormtrooper();
