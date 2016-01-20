@@ -12,8 +12,6 @@ namespace DeathStar
         Mainexhaustport mainExhaustPort;
         Thermalexhaustport ThermalExhaustPort;
         TractorBeam tractorBeam;
-        TractorBeamGenerator tractorBeamGenerator;
-        EmergencyRadiationDischarge emergencyRadiationDischarge;
         MainPowerGenerator mainPowerGenerator;
         HyperMatterReactor hyperMatterReactor;
         IonDriveReactor ionDriveReactor;
@@ -29,5 +27,10 @@ namespace DeathStar
         FuelCollector fuelCollector;
         ExteriorQuadaniumsteelouterhull exteriorQuadaniumSteelOuterHull;
         
+        public void emergencyHullRepair()
+        {
+            exteriorQuadaniumSteelOuterHull.NaniteRepair();
+        }
+       
     }
 }

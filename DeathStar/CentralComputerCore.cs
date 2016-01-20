@@ -11,7 +11,6 @@ namespace TopSecretPlans
         string command;
         int computerPower;
         int coreHealth = 100;
-        int shieldHealth = 100;
         bool shieldStatus;
 
         public CentralComputerCore(string Command, int ComputerPower)
@@ -32,37 +31,11 @@ namespace TopSecretPlans
         {
             coreHealth--;
         }
-        public void TakeShieldDamage()
-        {
-            shieldHealth--;
-        }
-
         public bool TurnShieldOnOrOff(bool shieldStatus)
         {
             this.shieldStatus = shieldStatus;
             return this.shieldStatus;
         }
-
-        public void hasEmail()
-        {
-
-            int emailProbMin = 0;
-            int emailProbMax = 2;
-
-            Random emailProbability = new Random();
-            int eProb = emailProbability.Next(emailProbMin, emailProbMax);
-
-            if (eProb >= 1)
-            {
-                Console.WriteLine("You have mail!");
-                System.Media.SoundPlayer player = new System.Media.SoundPlayer("Scott.wav");
-            }
-            else
-            {
-                Console.WriteLine("You have no mail.");
-
-            }
-
         }
     }
 }

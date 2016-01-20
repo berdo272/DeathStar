@@ -12,10 +12,6 @@ namespace TopSecretPlans
         private readonly int Length;
         private readonly int numberOfFans;
         
-        public Exhaust()
-        {
-
-        }
         public Exhaust(int diameter, int length, int numberOfFans)
         {
             this.Diameter = diameter;

@@ -8,11 +8,6 @@ namespace TopSecretPlans
 {
     public class Destination 
     {
-        public Destination()
-        {
-           
-        }
-
         public string getDestination()
         {
             Console.WriteLine("where do you want to teleport to?");
